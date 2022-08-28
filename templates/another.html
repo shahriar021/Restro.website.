@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script type = "text/javascript"
+         src = "{{ url_for('static', filename = 'script/hello.js') }}" ></script>
+    <style>
+        a{
+            text-decoration: none;
+            color: green;
+            font-size: 20px;
+            padding: 8px;
+        }
+        a:hover{
+            color: blue;
+        }
+             h1{
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="home.html">Home</a> |
+    <a href="alldata.html">Admin</a> |
+    <a href="another.html">Another</a> |
+    <a href="stdinfo.html">Show Item</a> |
+    <div align="right">
+    <a href="login.html">Log in</a> |
+        <a href="signup.html">Sign up</a> |
+        </div>
+ </nav>
+
+    <p id="para">demo</p>
+
+</body>
+</html>

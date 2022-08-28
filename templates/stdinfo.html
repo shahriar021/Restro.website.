@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css')}}">
+
+</head>
+<style>
+    table, tr,td{
+
+        border: 10px solid cadetblue;
+        border-collapse: collapse;
+
+    }
+    a{
+            text-decoration: none;
+            color: green;
+            font-size: 20px;
+            padding: 8px;
+        }
+        a:hover{
+            color: blue;
+        }
+             h1{
+        text-align: center;
+        }
+</style>
+
+<body>
+<nav>
+    <a href="home.html">Home</a> |
+    <a href="alldata.html">Admin</a> |
+    <a href="another.html">Another</a> |
+    <a href="stdinfo.html">Show Item</a> |
+    <div align="right">
+    <a href="login.html">Log in</a> |
+        <a href="signup.html">Sign up</a> |
+        </div>
+ </nav>
+
+    <table width="100%">
+        <tr>
+            <td>Item ID</td>
+            <td>Item Name</td>
+            <td>Item Details</td>
+            <td>Item Price</td>
+
+            <td>Order here</td>
+        </tr>
+        {%for st in list%}
+             <tr>
+                <td>{{st['id']}}</td>
+                <td>{{st['name']}}</td>
+                <td>{{st['age']}}</td>
+                <td>{{st['phone']}}</td>
+
+                 <!--<td><input type="submit" value="order"/><input type="submit" value="cancel"/></td>-->
+             <!--<td><a href="another.html"/>order</td>-->
+                 <td><a href="another.html"/> <button onclick="order()" class="btn">Order</button></td>
+            </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
